@@ -32,7 +32,7 @@ GPGME_ENV = CGO_CFLAGS="$(shell gpgme-config --cflags 2>/dev/null)" CGO_LDFLAGS=
 
 all: tools test validate .gitvalidation
 
-build: vendor build-internal
+build: build-internal
 
 build-internal:
 	$(GPGME_ENV) go build $(BUILDFLAGS) $(PACKAGES)
@@ -48,7 +48,7 @@ install-docs: docs
 
 install: install-docs
 
-cross: vendor
+cross:
 	GOOS=windows $(MAKE) build-internal BUILDTAGS="$(BUILDTAGS) $(BUILD_TAGS_WINDOWS_CROSS)"
 	GOOS=darwin $(MAKE) build-internal BUILDTAGS="$(BUILDTAGS) $(BUILD_TAGS_DARWIN_CROSS)"
 
@@ -57,25 +57,12 @@ tools: tools.timestamp
 tools.timestamp: Makefile
 	@go get -u $(BUILDFLAGS) golang.org/x/lint/golint
 	@go get $(BUILDFLAGS) github.com/vbatts/git-validation
-	@go get -u github.com/rancher/trash
 	@touch tools.timestamp
 
-vendor: tools.timestamp vendor.conf
-	@if which trash > /dev/null ; then \
-		trash ; \
-	else \
-		if [ "$(GOBIN)" ] ; then \
-			$(GOBIN)/trash ; \
-		else \
-			$(GOPATH)/bin/trash ; \
-		fi ; \
-	fi
-	@touch vendor
-
 clean:
-	rm -rf vendor tools.timestamp $(MANPAGES)
+	rm -rf tools.timestamp $(MANPAGES)
 
-test: vendor
+test:
 	@$(GPGME_ENV) go test $(BUILDFLAGS) -cover $(PACKAGES)
 
 # This is not run as part of (make all), but Travis CI does run this.
@@ -87,9 +74,7 @@ test-skopeo:
 	@echo === Testing skopeo build
 	@export GOPATH=$$(mktemp -d) && \
 		skopeo_path=$${GOPATH}/src/github.com/containers/skopeo && \
-		vendor_path=$${skopeo_path}/vendor/github.com/containers/image && \
 		git clone -b $(SKOPEO_BRANCH) https://github.com/$(SKOPEO_REPO) $${skopeo_path} && \
-		rm -rf $${vendor_path} && cp -r . $${vendor_path} && rm -rf $${vendor_path}/vendor && \
 		cd $${skopeo_path} && \
 		make BUILDTAGS="$(BUILDTAGS)" binary-local test-all-local && \
 		$(SUDO) make BUILDTAGS="$(BUILDTAGS)" check && \
@@ -100,7 +85,7 @@ fmt:
 
 validate: lint
 	@go vet $(PACKAGES)
-	@test -z "$$(gofmt -s -l . | grep -ve '^vendor' | tee /dev/stderr)"
+	@test -z "$$(gofmt -s -l . | tee /dev/stderr)"
 
 lint:
 	@out="$$(golint $(PACKAGES))"; \
