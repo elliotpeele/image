@@ -9,7 +9,7 @@ require (
 	github.com/Microsoft/hcsshim v0.0.0-20180606212836-eca7177590cd // indirect
 	github.com/VividCortex/ewma v1.1.1 // indirect
 	github.com/containerd/continuity v0.0.0-20180216233310-d8fb8589b0e8 // indirect
-	github.com/containers/storage v1.12.2
+	github.com/containers/storage v1.12.10
 	github.com/docker/distribution v0.0.0-20170817175659-5f6282db7d65
 	github.com/docker/docker v0.0.0-20180522102801-da99009bbb11
 	github.com/docker/docker-credential-helpers v0.6.0
