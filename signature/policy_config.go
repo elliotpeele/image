@@ -19,15 +19,15 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/transports"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/transports"
+	"github.com/elliotpeele/image/types"
 	"github.com/pkg/errors"
 )
 
 // systemDefaultPolicyPath is the policy path used for DefaultPolicy().
 // You can override this at build time with
-// -ldflags '-X github.com/containers/image/signature.systemDefaultPolicyPath=$your_path'
+// -ldflags '-X github.com/elliotpeele/image/signature.systemDefaultPolicyPath=$your_path'
 var systemDefaultPolicyPath = builtinDefaultPolicyPath
 
 // builtinDefaultPolicyPath is the policy path used for DefaultPolicy().

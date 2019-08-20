@@ -2,7 +2,7 @@
 package none
 
 import (
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/types"
 	"github.com/opencontainers/go-digest"
 )
 

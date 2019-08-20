@@ -14,10 +14,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/manifest"
-	"github.com/containers/image/pkg/blobinfocache/none"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/manifest"
+	"github.com/elliotpeele/image/pkg/blobinfocache/none"
+	"github.com/elliotpeele/image/types"
 	"github.com/docker/distribution/registry/api/errcode"
 	"github.com/docker/distribution/registry/api/v2"
 	"github.com/docker/distribution/registry/client"
@@ -174,7 +174,7 @@ func (d *dockerImageDestination) PutBlob(ctx context.Context, stream io.Reader, 
 	// FIXME: DELETE uploadLocation on failure (does not really work in docker/distribution servers, which incorrectly require the "delete" action in the token's scope)
 
 	locationQuery := uploadLocation.Query()
-	// TODO: check inputInfo.Digest == computedDigest https://github.com/containers/image/pull/70#discussion_r77646717
+	// TODO: check inputInfo.Digest == computedDigest https://github.com/elliotpeele/image/pull/70#discussion_r77646717
 	locationQuery.Set("digest", computedDigest.String())
 	uploadLocation.RawQuery = locationQuery.Encode()
 	res, err = d.c.makeRequestToResolvedURL(ctx, "PUT", uploadLocation.String(), map[string][]string{"Content-Type": {"application/octet-stream"}}, nil, -1, v2Auth, nil)

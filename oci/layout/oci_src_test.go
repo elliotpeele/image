@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/containers/image/pkg/blobinfocache/memory"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/pkg/blobinfocache/memory"
+	"github.com/elliotpeele/image/types"
 	digest "github.com/opencontainers/go-digest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

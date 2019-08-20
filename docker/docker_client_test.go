@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/types"
 	"github.com/stretchr/testify/assert"
 )
 

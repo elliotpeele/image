@@ -6,11 +6,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/containers/image/directory"
-	"github.com/containers/image/docker"
-	"github.com/containers/image/manifest"
-	"github.com/containers/image/signature"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/directory"
+	"github.com/elliotpeele/image/docker"
+	"github.com/elliotpeele/image/manifest"
+	"github.com/elliotpeele/image/signature"
+	"github.com/elliotpeele/image/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

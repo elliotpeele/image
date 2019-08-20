@@ -12,10 +12,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/internal/tmpdir"
-	"github.com/containers/image/manifest"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/internal/tmpdir"
+	"github.com/elliotpeele/image/manifest"
+	"github.com/elliotpeele/image/types"
 	"github.com/opencontainers/go-digest"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -236,7 +236,7 @@ func (d *Destination) PutManifest(ctx context.Context, m []byte) error {
 		// Using the host name here is more explicit about the intent, and it has the same
 		// effect as (docker pull) in projectatomic/docker, which tags the result using
 		// a hostname-qualified reference.
-		// See https://github.com/containers/image/issues/72 for a more detailed
+		// See https://github.com/elliotpeele/image/issues/72 for a more detailed
 		// analysis and explanation.
 		refString := fmt.Sprintf("%s:%s", tag.Name(), tag.Tag())
 		repoTags = append(repoTags, refString)

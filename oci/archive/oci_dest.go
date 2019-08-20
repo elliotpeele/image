@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/types"
 	"github.com/containers/storage/pkg/archive"
 	"github.com/pkg/errors"
 )

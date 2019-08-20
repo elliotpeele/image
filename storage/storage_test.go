@@ -18,8 +18,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/containers/image/pkg/blobinfocache/memory"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/pkg/blobinfocache/memory"
+	"github.com/elliotpeele/image/types"
 	"github.com/containers/storage"
 	"github.com/containers/storage/pkg/archive"
 	"github.com/containers/storage/pkg/idtools"

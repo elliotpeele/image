@@ -16,11 +16,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/pkg/docker/config"
-	"github.com/containers/image/pkg/sysregistriesv2"
-	"github.com/containers/image/pkg/tlsclientconfig"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/pkg/docker/config"
+	"github.com/elliotpeele/image/pkg/sysregistriesv2"
+	"github.com/elliotpeele/image/pkg/tlsclientconfig"
+	"github.com/elliotpeele/image/types"
 	"github.com/docker/distribution/registry/client"
 	"github.com/docker/go-connections/tlsconfig"
 	digest "github.com/opencontainers/go-digest"
@@ -455,7 +455,7 @@ func (c *dockerClient) makeRequestToResolvedURL(ctx context.Context, method, url
 // 1) docker does that as well
 // 2) gcr.io is sending 401 without a WWW-Authenticate header in the real request
 //
-// debugging: https://github.com/containers/image/pull/211#issuecomment-273426236 and follows up
+// debugging: https://github.com/elliotpeele/image/pull/211#issuecomment-273426236 and follows up
 func (c *dockerClient) setupRequestAuth(req *http.Request, extraScope *authScope) error {
 	if len(c.challenges) == 0 {
 		return nil

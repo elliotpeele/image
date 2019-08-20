@@ -5,9 +5,9 @@
 # Container signature format
 
 This document describes the format of container signatures,
-as implemented by the `github.com/containers/image/signature` package.
+as implemented by the `github.com/elliotpeele/image/signature` package.
 
-Most users should be able to consume these signatures by using the `github.com/containers/image/signature` package
+Most users should be able to consume these signatures by using the `github.com/elliotpeele/image/signature` package
 (preferably through the higher-level `signature.PolicyContext` interface)
 without having to care about the details of the format described below.
 This documentation exists primarily for maintainers of the package
@@ -63,7 +63,7 @@ or in any way usable for making policy decisions about the image.)
 
 When verifying a cryptographic signature in the OpenPGP format,
 the consumer MUST verify at least the following aspects of the signature
-(like the `github.com/containers/image/signature` package does):
+(like the `github.com/elliotpeele/image/signature` package does):
 
 - The blob MUST be a “Signed Message” as defined RFC 4880 section 11.3.
   (e.g. it MUST NOT be an unsigned “Literal Message”, or any other non-signature format).

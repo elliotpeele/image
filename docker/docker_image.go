@@ -8,9 +8,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/image"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/image"
+	"github.com/elliotpeele/image/types"
 	"github.com/pkg/errors"
 )
 

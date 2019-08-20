@@ -3,8 +3,8 @@ package storage
 import (
 	"testing"
 
-	"github.com/containers/image/manifest"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/manifest"
+	"github.com/elliotpeele/image/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

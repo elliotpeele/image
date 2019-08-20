@@ -3,7 +3,7 @@ package manifest
 import (
 	"encoding/json"
 
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/types"
 	"github.com/opencontainers/go-digest"
 	"github.com/opencontainers/image-spec/specs-go"
 	imgspecv1 "github.com/opencontainers/image-spec/specs-go/v1"

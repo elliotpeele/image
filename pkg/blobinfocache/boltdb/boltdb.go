@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/containers/image/pkg/blobinfocache/internal/prioritize"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/pkg/blobinfocache/internal/prioritize"
+	"github.com/elliotpeele/image/types"
 	bolt "github.com/etcd-io/bbolt"
 	"github.com/opencontainers/go-digest"
 	"github.com/sirupsen/logrus"

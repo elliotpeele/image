@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/containers/image/docker/policyconfiguration"
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/transports"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/policyconfiguration"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/transports"
+	"github.com/elliotpeele/image/types"
 	"github.com/pkg/errors"
 )
 

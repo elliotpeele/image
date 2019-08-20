@@ -15,7 +15,7 @@ that we follow.
 ## Reporting Issues
 
 Before reporting an issue, check our backlog of
-[open issues](https://github.com/containers/image/issues)
+[open issues](https://github.com/elliotpeele/image/issues)
 to see if someone else has already reported it. If so, feel free to add
 your scenario, or additional information, to the discussion. Or simply
 "subscribe" to it to be notified when it is updated.
@@ -122,9 +122,9 @@ IRC group on `irc.freenode.net` called `container-projects`
 that has been setup.
 
 For discussions around issues/bugs and features, you can use the github
-[issues](https://github.com/containers/image/issues)
+[issues](https://github.com/elliotpeele/image/issues)
 and
-[PRs](https://github.com/containers/image/pulls)
+[PRs](https://github.com/elliotpeele/image/pulls)
 tracking system.
 
 <!--

@@ -6,17 +6,17 @@ import (
 	// register all known transports
 	// NOTE: Make sure docs/containers-policy.json.5.md is updated when adding or updating
 	// a transport.
-	_ "github.com/containers/image/directory"
-	_ "github.com/containers/image/docker"
-	_ "github.com/containers/image/docker/archive"
-	_ "github.com/containers/image/oci/archive"
-	_ "github.com/containers/image/oci/layout"
-	_ "github.com/containers/image/openshift"
-	_ "github.com/containers/image/tarball"
+	_ "github.com/elliotpeele/image/directory"
+	_ "github.com/elliotpeele/image/docker"
+	_ "github.com/elliotpeele/image/docker/archive"
+	_ "github.com/elliotpeele/image/oci/archive"
+	_ "github.com/elliotpeele/image/oci/layout"
+	_ "github.com/elliotpeele/image/openshift"
+	_ "github.com/elliotpeele/image/tarball"
 	// The ostree transport is registered by ostree*.go
 	// The storage transport is registered by storage*.go
-	"github.com/containers/image/transports"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/transports"
+	"github.com/elliotpeele/image/types"
 	"github.com/pkg/errors"
 )
 

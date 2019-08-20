@@ -13,7 +13,7 @@ BUILD_TAGS_DARWIN_CROSS = containers_image_openpgp
 BUILDTAGS = btrfs_noversion libdm_no_deferred_remove
 BUILDFLAGS := -tags "$(BUILDTAGS)"
 
-PACKAGES := $(shell go list $(BUILDFLAGS) ./... | grep -v github.com/containers/image/vendor)
+PACKAGES := $(shell go list $(BUILDFLAGS) ./... | grep -v github.com/elliotpeele/image/vendor)
 SOURCE_DIRS = $(shell echo $(PACKAGES) | awk 'BEGIN{FS="/"; RS=" "}{print $$4}' | uniq)
 
 PREFIX ?= ${DESTDIR}/usr

@@ -11,11 +11,11 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/containers/image/directory/explicitfilepath"
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/image"
-	"github.com/containers/image/transports"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/directory/explicitfilepath"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/image"
+	"github.com/elliotpeele/image/transports"
+	"github.com/elliotpeele/image/types"
 	"github.com/pkg/errors"
 )
 
@@ -87,7 +87,7 @@ func (t ostreeTransport) ParseReference(ref string) (types.ImageReference, error
 
 // NewReference returns an OSTree reference for a specified repo and image.
 func NewReference(image string, repo string) (types.ImageReference, error) {
-	// image is not _really_ in a containers/image/docker/reference format;
+	// image is not _really_ in a elliotpeele/image/docker/reference format;
 	// as far as the libOSTree ociimage/* namespace is concerned, it is more or
 	// less an arbitrary string with an implied tag.
 	// Parse the image using reference.ParseNormalizedNamed so that we can

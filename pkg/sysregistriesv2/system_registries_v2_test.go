@@ -7,11 +7,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/containers/image/docker/reference"
+	"github.com/elliotpeele/image/docker/reference"
 )
 
 func TestParseLocation(t *testing.T) {

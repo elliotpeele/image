@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/containers/image/pkg/strslice"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/pkg/strslice"
+	"github.com/elliotpeele/image/types"
 	"github.com/opencontainers/go-digest"
 	"github.com/pkg/errors"
 )

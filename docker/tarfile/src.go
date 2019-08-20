@@ -11,10 +11,10 @@ import (
 	"path"
 	"sync"
 
-	"github.com/containers/image/internal/tmpdir"
-	"github.com/containers/image/manifest"
-	"github.com/containers/image/pkg/compression"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/internal/tmpdir"
+	"github.com/elliotpeele/image/manifest"
+	"github.com/elliotpeele/image/pkg/compression"
+	"github.com/elliotpeele/image/types"
 	digest "github.com/opencontainers/go-digest"
 	"github.com/pkg/errors"
 )

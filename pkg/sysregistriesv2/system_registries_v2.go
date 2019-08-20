@@ -10,17 +10,17 @@ import (
 	"sync"
 
 	"github.com/BurntSushi/toml"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/types"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/containers/image/docker/reference"
+	"github.com/elliotpeele/image/docker/reference"
 )
 
 // systemRegistriesConfPath is the path to the system-wide registry
 // configuration file and is used to add/subtract potential registries for
 // obtaining images.  You can override this at build time with
-// -ldflags '-X github.com/containers/image/sysregistries.systemRegistriesConfPath=$your_path'
+// -ldflags '-X github.com/elliotpeele/image/sysregistries.systemRegistriesConfPath=$your_path'
 var systemRegistriesConfPath = builtinRegistriesConfPath
 
 // builtinRegistriesConfPath is the path to the registry configuration file.

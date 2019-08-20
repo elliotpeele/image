@@ -7,7 +7,7 @@ import (
 
 // unixTempDirForBigFiles is the directory path to store big files on non Windows systems.
 // You can override this at build time with
-// -ldflags '-X github.com/containers/image/internal/tmpdir.unixTempDirForBigFiles=$your_path'
+// -ldflags '-X github.com/elliotpeele/image/internal/tmpdir.unixTempDirForBigFiles=$your_path'
 var unixTempDirForBigFiles = builtinUnixTempDirForBigFiles
 
 // builtinUnixTempDirForBigFiles is the directory path to store big files.

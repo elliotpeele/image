@@ -3,7 +3,7 @@ package policyconfiguration
 import (
 	"strings"
 
-	"github.com/containers/image/docker/reference"
+	"github.com/elliotpeele/image/docker/reference"
 	"github.com/pkg/errors"
 )
 

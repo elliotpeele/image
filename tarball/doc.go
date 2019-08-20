@@ -7,11 +7,11 @@
 //	import (
 //		"fmt"
 //
-//		cp "github.com/containers/image/copy"
-//		"github.com/containers/image/tarball"
-//		"github.com/containers/image/transports/alltransports"
+//		cp "github.com/elliotpeele/image/copy"
+//		"github.com/elliotpeele/image/tarball"
+//		"github.com/elliotpeele/image/transports/alltransports"
 //
-//		imgspecv1 "github.com/containers/image/transports/alltransports"
+//		imgspecv1 "github.com/elliotpeele/image/transports/alltransports"
 //	)
 //
 //	func imageFromTarball() {

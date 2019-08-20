@@ -5,9 +5,9 @@ package signature
 import (
 	"fmt"
 
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/transports"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/transports"
+	"github.com/elliotpeele/image/types"
 )
 
 // parseImageAndDockerReference converts an image and a reference string into two parsed entities, failing on any error and handling unidentified images.

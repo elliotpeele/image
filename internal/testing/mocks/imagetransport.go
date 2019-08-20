@@ -1,6 +1,6 @@
 package mocks
 
-import "github.com/containers/image/types"
+import "github.com/elliotpeele/image/types"
 
 // NameImageTransport is a mock of types.ImageTransport which returns itself in Name.
 type NameImageTransport string

@@ -5,7 +5,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/containers/image/docker/reference"
+	"github.com/elliotpeele/image/docker/reference"
 	"github.com/opencontainers/go-digest"
 	"github.com/opencontainers/image-spec/specs-go/v1"
 )

@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/containers/image/pkg/blobinfocache/boltdb"
-	"github.com/containers/image/pkg/blobinfocache/memory"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/pkg/blobinfocache/boltdb"
+	"github.com/elliotpeele/image/pkg/blobinfocache/memory"
+	"github.com/elliotpeele/image/types"
 	"github.com/sirupsen/logrus"
 )
 

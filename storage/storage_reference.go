@@ -6,8 +6,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/types"
 	"github.com/containers/storage"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

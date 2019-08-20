@@ -9,9 +9,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/containers/image/pkg/blobinfocache/boltdb"
-	"github.com/containers/image/pkg/blobinfocache/memory"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/pkg/blobinfocache/boltdb"
+	"github.com/elliotpeele/image/pkg/blobinfocache/memory"
+	"github.com/elliotpeele/image/types"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -8,8 +8,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/containers/image/pkg/tlsclientconfig"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/pkg/tlsclientconfig"
+	"github.com/elliotpeele/image/types"
 	"github.com/docker/go-connections/tlsconfig"
 	"github.com/opencontainers/go-digest"
 	imgspecv1 "github.com/opencontainers/image-spec/specs-go/v1"

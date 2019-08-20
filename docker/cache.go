@@ -1,8 +1,8 @@
 package docker
 
 import (
-	"github.com/containers/image/docker/reference"
-	"github.com/containers/image/types"
+	"github.com/elliotpeele/image/docker/reference"
+	"github.com/elliotpeele/image/types"
 )
 
 // bicTransportScope returns a BICTransportScope appropriate for ref.

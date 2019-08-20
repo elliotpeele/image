@@ -2,7 +2,7 @@
 
 package alltransports
 
-import "github.com/containers/image/transports"
+import "github.com/elliotpeele/image/transports"
 
 func init() {
 	transports.Register(transports.NewStubTransport("ostree"))
